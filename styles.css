@@ -1,0 +1,125 @@
+body {
+    font-family: 'Nanum Pen Script', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h2 {
+    font-size: 60px;
+    line-height: 0; }
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffe1a8;
+    padding: 20px;
+    padding-bottom: 55px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.base-and-options {
+    display: flex;
+    align-items: flex-start;
+}
+
+.base-image {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px; /* Space between base image and outfit options */
+    text-align: center; /* Center the buttons */
+    margin-top: 40px !important;
+    margin-left: 5px !important;
+}
+
+#base {
+    width: 400px;
+    height: auto;
+    border: 8px solid #ffff;
+    border-radius: 16px;
+    position: relative;
+    z-index: 2; /* Ensure base is above background */
+}
+
+#background-overlay, #outfit-overlay, #hat-overlay {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 2%);
+    width: 400px;
+    height: auto;
+    border-radius: 7px;
+}
+
+#background-overlay {
+    z-index: 1; /* Ensure background is below base */
+}
+
+#outfit-overlay, #hat-overlay {
+    z-index: 3; /* Ensure overlays are above base */
+}
+
+.hidden {
+    display: none;
+}
+
+.outfit-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.outfit-options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+}
+
+.outfit {
+    width: 70px;
+    height: auto;
+    margin: 10px;
+    cursor: pointer;
+    border: 2px solid #fff;
+    border-radius: 16px;
+    transition: transform 0.2s;
+    background-color: white;
+}
+
+.outfit:hover {
+    transform: scale(1.1);
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between buttons */
+    margin-top: 10px;
+}
+
+#reset-button, #download-button {
+    padding: 10px 20px;
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 30px;
+    cursor: pointer;
+    border: none;
+    border-radius: 40px;
+    background-color: #FFA500;
+    color: #fff;
+    transition: background-color 0.2s;
+}
+
+#reset-button:hover, #download-button:hover {
+    background-color: #ff8b00;
+}
+
+h3 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 40px;
+}
