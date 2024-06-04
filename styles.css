@@ -1,6 +1,10 @@
 /* Existing CSS */
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&family=Nunito:wght@400;700&display=swap');
+
 body {
-    font-family: 'Nanum Pen Script', cursive;
+    font-family: 'Nunito', sans-serif;
+    color: #333333;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,7 +15,7 @@ body {
 }
 
 h2 {
-    font-size: 60px;
+    font-size: 40px;
     line-height: 0;
 }
 
@@ -30,7 +34,7 @@ h2 {
 
 .base-and-options {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .base-image {
@@ -120,8 +124,9 @@ h2 {
 
 #reset-button, #download-button {
     padding: 10px 20px;
-    font-family: 'Nanum Pen Script', cursive;
-    font-size: 30px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
     cursor: pointer;
     border: none;
     border-radius: 40px;
@@ -139,7 +144,7 @@ h2 {
 h3 {
     margin-top: 0px;
     margin-bottom: 0px;
-    font-size: 34px;
+    font-size: 22px;
     color: #3a2104;
     text-align: left; /* Change to left align the text */
 }
