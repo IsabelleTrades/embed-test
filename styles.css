@@ -234,6 +234,7 @@ h3 {
     .base-image {
         margin-right: 0;
         margin-bottom: 20px;
+        align-items: center; /* Center-align outfit sections */
     }
     .outfit {
         width: 55px;
