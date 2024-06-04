@@ -2,11 +2,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const backgrounds = document.querySelectorAll('.outfit.background');
     const outfits = document.querySelectorAll('.outfit.clothing');
     const hats = document.querySelectorAll('.outfit.hat');
-    const accessories = document.querySelectorAll('.outfit.accessory');
+    const faces = document.querySelectorAll('.outfit.face');
     const backgroundOverlay = document.getElementById('background-overlay');
     const outfitOverlay = document.getElementById('outfit-overlay');
     const hatOverlay = document.getElementById('hat-overlay');
-    const accessoryOverlay = document.getElementById('accessory-overlay');
+    const faceOverlay = document.getElementById('face-overlay');
     const resetButton = document.getElementById('reset-button');
     const downloadButton = document.getElementById('download-button');
     const canvas = document.getElementById('canvas');
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
     backgroundOverlay.crossOrigin = "anonymous";
     outfitOverlay.crossOrigin = "anonymous";
     hatOverlay.crossOrigin = "anonymous";
-    accessoryOverlay.crossOrigin = "anonymous";
+    faceOverlay.crossOrigin = "anonymous";
 
     function drawImageOnCanvas() {
         const context = canvas.getContext('2d');
@@ -33,19 +33,19 @@ document.addEventListener('DOMContentLoaded', function () {
         // Draw the base image next
         context.drawImage(baseImage, 0, 0, canvas.width, canvas.height);
 
-        // Draw the outfit overlay
-        if (!outfitOverlay.classList.contains('hidden') && outfitOverlay.src) {
-            context.drawImage(outfitOverlay, 0, 0, canvas.width, canvas.height);
-        }
-
-        // Draw the hat overlay
+        // Draw the hat overlay next
         if (!hatOverlay.classList.contains('hidden') && hatOverlay.src) {
             context.drawImage(hatOverlay, 0, 0, canvas.width, canvas.height);
         }
 
-        // Draw the accessory overlay
-        if (!accessoryOverlay.classList.contains('hidden') && accessoryOverlay.src) {
-            context.drawImage(accessoryOverlay, 0, 0, canvas.width, canvas.height);
+        // Draw the face overlay next
+        if (!faceOverlay.classList.contains('hidden') && faceOverlay.src) {
+            context.drawImage(faceOverlay, 0, 0, canvas.width, canvas.height);
+        }
+
+        // Draw the outfit overlay last to ensure it is on top
+        if (!outfitOverlay.classList.contains('hidden') && outfitOverlay.src) {
+            context.drawImage(outfitOverlay, 0, 0, canvas.width, canvas.height);
         }
     }
 
@@ -97,16 +97,16 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    accessories.forEach(accessory => {
-        accessory.addEventListener('click', function () {
-            if (accessoryOverlay.src === accessory.src && !accessoryOverlay.classList.contains('hidden')) {
-                accessoryOverlay.classList.add('hidden');
-                accessoryOverlay.src = '';
+    faces.forEach(face => {
+        face.addEventListener('click', function () {
+            if (faceOverlay.src === face.src && !faceOverlay.classList.contains('hidden')) {
+                faceOverlay.classList.add('hidden');
+                faceOverlay.src = '';
                 drawImageOnCanvas(); // Ensure the canvas is updated
             } else {
-                accessoryOverlay.src = accessory.src;
-                accessoryOverlay.onload = function () {
-                    accessoryOverlay.classList.remove('hidden');
+                faceOverlay.src = face.src;
+                faceOverlay.onload = function () {
+                    faceOverlay.classList.remove('hidden');
                     drawImageOnCanvas();
                 };
             }
@@ -120,8 +120,8 @@ document.addEventListener('DOMContentLoaded', function () {
         outfitOverlay.classList.add('hidden');
         hatOverlay.src = '';
         hatOverlay.classList.add('hidden');
-        accessoryOverlay.src = '';
-        accessoryOverlay.classList.add('hidden');
+        faceOverlay.src = '';
+        faceOverlay.classList.add('hidden');
         drawImageOnCanvas();
     });
 

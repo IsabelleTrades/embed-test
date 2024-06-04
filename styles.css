@@ -4,6 +4,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
     margin: 0;
 }
 
@@ -16,11 +17,11 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #ffe1a8;
-    padding-top: 45px;
-    padding-left: 45px;
-    padding-right: 50px;
-    padding-bottom: 35px;
+    background-color: #fed580;
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -51,7 +52,7 @@ h2 {
     z-index: 2;
 }
 
-#background-overlay, #outfit-overlay, #hat-overlay, #accessory-overlay {
+#background-overlay, #outfit-overlay, #hat-overlay, #face-overlay {
     position: absolute;
     top: 0;
     left: 50%;
@@ -65,8 +66,16 @@ h2 {
     z-index: 1;
 }
 
-#outfit-overlay, #hat-overlay, #accessory-overlay {
+#hat-overlay {
+    z-index: 2;
+}
+
+#face-overlay {
     z-index: 3;
+}
+
+#outfit-overlay {
+    z-index: 4;
 }
 
 .hidden {
@@ -83,7 +92,6 @@ h2 {
     display: flex;
     justify-content: flex-start; /* Change to justify items to the start */
     flex-wrap: wrap;
-    margin-bottom: 7px;
 }
 
 .outfit {
@@ -114,7 +122,6 @@ h2 {
     font-size: 30px;
     cursor: pointer;
     border: none;
- text-transform: uppercase;
     border-radius: 40px;
     background-color: #FFA500;
     color: #fff;
