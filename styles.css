@@ -57,9 +57,9 @@ h2 {
 
 #background-overlay, #outfit-overlay, #hat-overlay, #face-overlay {
     position: absolute;
-    top: 50%;
+    top: 0;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0);
     width: 400px;
     height: auto;
     border-radius: 7px;
@@ -140,8 +140,8 @@ h2 {
 }
 
 h3 {
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: px;
+    margin-bottom: 3px;
     font-size: 24px;
     color: #623b04;
     text-align: left;
@@ -257,7 +257,7 @@ h3 {
     }
     #background-overlay, #outfit-overlay, #hat-overlay, #face-overlay {
         left: 50%; /* Center-align the overlays */
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, 0);
     }
     .outfit-section {
         align-items: center; /* Center-align outfit sections */
