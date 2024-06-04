@@ -183,6 +183,12 @@ h3 {
 }
 
 @media (max-width: 480px) {
+
+    body {
+        margin: 0;
+        height: 100vh;
+    }
+    
     h2 {
         font-size: 30px;
     }
