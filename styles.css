@@ -147,7 +147,7 @@ h3 {
 }
 
 /* Media Queries for responsiveness */
-@media (max-width: 1024px) {
+@media (max-width: 1050px) {
     body{
        height:  100vh !important;
     }
