@@ -150,7 +150,6 @@ h3 {
 /* Media Queries for responsiveness */
 @media (max-width: 1050px) {
     body {
-        height: 860px !important;
         height: 80vh;
     }
     #base {
@@ -172,7 +171,6 @@ h3 {
 @media (max-width: 768px) {
     body {
         margin-top: 20px !important;
-        height: 890px !important;
     }
     .base-image {
         margin-right: 0;
@@ -196,7 +194,6 @@ h3 {
     body {
         margin: 0;
         margin-top: 20px !important;
-        height: 770px !important;
     }
     h2 {
         font-size: 30px;
@@ -231,7 +228,6 @@ h3 {
 @media (max-width: 410px) {
     body {
         margin-top: 20px !important;
-        height: 1000px !important;
     }
     .base-image {
         margin-right: 0;
