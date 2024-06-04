@@ -207,7 +207,7 @@ h3 {
     }
     .game-container {
         padding: 20px;
-        border-radius: 20px;
+        border-radius: 0px;
     }
     .button-container {
         flex-direction: row; /* Keep the buttons in a row */
