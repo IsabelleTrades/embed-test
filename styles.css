@@ -21,7 +21,7 @@ h2 {
     padding-left: 40px;
     padding-right: 40px;
     padding-bottom: 40px;
-    border-radius: 10px;
+    border-radius: 30px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -136,7 +136,7 @@ h2 {
 h3 {
     margin-top: 0px;
     margin-bottom: 0px;
-    font-size: 32px;
+    font-size: 34px;
     color: #3a2104;
     text-align: left; /* Change to left align the text */
 }
