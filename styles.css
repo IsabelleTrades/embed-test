@@ -1,3 +1,4 @@
+/* Existing CSS */
 body {
     font-family: 'Nanum Pen Script', cursive;
     display: flex;
@@ -9,7 +10,8 @@ body {
 
 h2 {
     font-size: 60px;
-    line-height: 0; }
+    line-height: 0;
+}
 
 .game-container {
     display: flex;
@@ -30,8 +32,8 @@ h2 {
 .base-image {
     position: relative;
     display: inline-block;
-    margin-right: 20px; /* Space between base image and outfit options */
-    text-align: center; /* Center the buttons */
+    margin-right: 20px;
+    text-align: center;
     margin-top: 40px !important;
     margin-left: 5px !important;
 }
@@ -42,10 +44,10 @@ h2 {
     border: 8px solid #ffff;
     border-radius: 16px;
     position: relative;
-    z-index: 2; /* Ensure base is above background */
+    z-index: 2;
 }
 
-#background-overlay, #outfit-overlay, #hat-overlay {
+#background-overlay, #outfit-overlay, #hat-overlay, #accessory-overlay {
     position: absolute;
     top: 0;
     left: 50%;
@@ -56,11 +58,11 @@ h2 {
 }
 
 #background-overlay {
-    z-index: 1; /* Ensure background is below base */
+    z-index: 1;
 }
 
-#outfit-overlay, #hat-overlay {
-    z-index: 3; /* Ensure overlays are above base */
+#outfit-overlay, #hat-overlay, #accessory-overlay {
+    z-index: 3;
 }
 
 .hidden {
@@ -98,7 +100,7 @@ h2 {
 .button-container {
     display: flex;
     justify-content: center;
-    gap: 10px; /* Space between buttons */
+    gap: 10px;
     margin-top: 10px;
 }
 

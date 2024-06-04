@@ -2,9 +2,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const backgrounds = document.querySelectorAll('.outfit.background');
     const outfits = document.querySelectorAll('.outfit.clothing');
     const hats = document.querySelectorAll('.outfit.hat');
+    const accessories = document.querySelectorAll('.outfit.accessory');
     const backgroundOverlay = document.getElementById('background-overlay');
     const outfitOverlay = document.getElementById('outfit-overlay');
     const hatOverlay = document.getElementById('hat-overlay');
+    const accessoryOverlay = document.getElementById('accessory-overlay');
     const resetButton = document.getElementById('reset-button');
     const downloadButton = document.getElementById('download-button');
     const canvas = document.getElementById('canvas');
@@ -14,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
     backgroundOverlay.crossOrigin = "anonymous";
     outfitOverlay.crossOrigin = "anonymous";
     hatOverlay.crossOrigin = "anonymous";
+    accessoryOverlay.crossOrigin = "anonymous";
 
     function drawImageOnCanvas() {
         const context = canvas.getContext('2d');
@@ -38,6 +41,11 @@ document.addEventListener('DOMContentLoaded', function () {
         // Draw the hat overlay
         if (!hatOverlay.classList.contains('hidden') && hatOverlay.src) {
             context.drawImage(hatOverlay, 0, 0, canvas.width, canvas.height);
+        }
+
+        // Draw the accessory overlay
+        if (!accessoryOverlay.classList.contains('hidden') && accessoryOverlay.src) {
+            context.drawImage(accessoryOverlay, 0, 0, canvas.width, canvas.height);
         }
     }
 
@@ -89,6 +97,22 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    accessories.forEach(accessory => {
+        accessory.addEventListener('click', function () {
+            if (accessoryOverlay.src === accessory.src && !accessoryOverlay.classList.contains('hidden')) {
+                accessoryOverlay.classList.add('hidden');
+                accessoryOverlay.src = '';
+                drawImageOnCanvas(); // Ensure the canvas is updated
+            } else {
+                accessoryOverlay.src = accessory.src;
+                accessoryOverlay.onload = function () {
+                    accessoryOverlay.classList.remove('hidden');
+                    drawImageOnCanvas();
+                };
+            }
+        });
+    });
+
     resetButton.addEventListener('click', function () {
         backgroundOverlay.src = '';
         backgroundOverlay.classList.add('hidden');
@@ -96,6 +120,8 @@ document.addEventListener('DOMContentLoaded', function () {
         outfitOverlay.classList.add('hidden');
         hatOverlay.src = '';
         hatOverlay.classList.add('hidden');
+        accessoryOverlay.src = '';
+        accessoryOverlay.classList.add('hidden');
         drawImageOnCanvas();
     });
 
