@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', function () {
         canvas.toBlob(function (blob) {
             const link = document.createElement('a');
             link.href = URL.createObjectURL(blob);
-            link.download = 'dressup.png';
+            link.download = 'hamchi.png';
             link.click();
         });
     });

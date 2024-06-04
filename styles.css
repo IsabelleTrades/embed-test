@@ -191,14 +191,6 @@ h3 {
         margin-top: -10px !important;
     }
     
-.frame iframe{
-    height: 270vh; 
-    }
-
-    .embed02 {
-        height: 120% !important;
-
-    }
 
     h2 {
         font-size: 30px;
@@ -219,6 +211,7 @@ h3 {
     .game-container {
         padding: 20px;
         border-radius: 0px;
+        box-shadow: none;
     }
     .button-container {
         flex-direction: row; /* Keep the buttons in a row */
