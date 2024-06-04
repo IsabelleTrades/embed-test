@@ -151,6 +151,7 @@ h3 {
 @media (max-width: 1050px) {
     body {
         height: 860px !important;
+        height: 80vh;
     }
     #base {
         width: 300px;
