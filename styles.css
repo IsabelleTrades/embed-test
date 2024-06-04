@@ -30,7 +30,8 @@ h2 {
 .base-and-options {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center; /* Center align vertically */
+    justify-content: center; /* Center align horizontally */
 }
 
 .base-image {
@@ -87,13 +88,13 @@ h2 {
 .outfit-section {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center; /* Center align items */
     margin-left: 5px;
 }
 
 .outfit-options {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center; /* Center align options */
     flex-wrap: wrap;
 }
 
@@ -234,7 +235,6 @@ h3 {
     .base-image {
         margin-right: 0;
         margin-bottom: 20px;
-        align-items: center; /* Center-align outfit sections */
     }
     .outfit {
         width: 55px;
