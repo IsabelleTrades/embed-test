@@ -191,8 +191,13 @@ h3 {
     }
     
 .frame iframe{
-    height: 81rem;
-}
+    height: 81rem; {
+    }
+
+    .embed02 {
+        height: 120% !important;
+
+    }
 
     h2 {
         font-size: 30px;
@@ -222,4 +227,4 @@ h3 {
         width: 90px;
         font-size: 14px;
     }
-}
+}}
