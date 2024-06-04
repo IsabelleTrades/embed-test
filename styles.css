@@ -190,6 +190,10 @@ h3 {
         height: 150vh;
     }
     
+.frame iframe{
+    height: 81rem;
+}
+
     h2 {
         font-size: 30px;
     }
