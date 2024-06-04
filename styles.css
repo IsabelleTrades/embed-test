@@ -29,7 +29,6 @@ h2 {
 .base-and-options {
     display: flex;
     align-items: flex-start;
-    gutter
 }
 
 .base-image {
@@ -116,10 +115,13 @@ h2 {
     font-size: 30px;
     cursor: pointer;
     border: none;
+ text-transform: uppercase;
     border-radius: 40px;
     background-color: #FFA500;
     color: #fff;
     transition: background-color 0.2s;
+    width: 150px; /* Set a fixed width for both buttons */
+    text-align: center; /* Center the text inside the buttons */
 }
 
 #reset-button:hover, #download-button:hover {
