@@ -9,7 +9,7 @@ body {
     align-items: center;
     margin-top: 73px !important;
     margin: 0;
-    height: 80vh;
+    height: 80vh !important;
 }
 
 h2 {
