@@ -9,7 +9,7 @@ body {
     align-items: center;
     margin-top: 73px !important;
     margin: 0;
-    height: 80vh;
+    height: 90vh;
 }
 
 h2 {
@@ -194,6 +194,7 @@ h3 {
     body {
         margin: 0;
         margin-top: 0px !important;
+        height: 110vh;
     }
     h2 {
         font-size: 30px;
