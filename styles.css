@@ -148,7 +148,9 @@ h3 {
 
 /* Media Queries for responsiveness */
 @media (max-width: 1050px) {
-  
+    body{
+       height:  70vh !important;
+    }
     #base {
         width: 300px;
     }
