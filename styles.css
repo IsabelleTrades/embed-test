@@ -183,7 +183,7 @@ h3 {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
 
     body {
         margin: 0;
