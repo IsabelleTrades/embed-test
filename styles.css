@@ -18,9 +18,9 @@ h2 {
     flex-direction: column;
     align-items: center;
     background-color: #ffe1a8;
-    padding-top: 20px;
+    padding-top: 40px;
     padding-left: 15px;
-padding-right: 10px;
+    padding-right: 10px;
     padding-bottom: 30px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -29,6 +29,7 @@ padding-right: 10px;
 .base-and-options {
     display: flex;
     align-items: flex-start;
+    gutter
 }
 
 .base-image {
@@ -36,7 +37,6 @@ padding-right: 10px;
     display: inline-block;
     margin-right: 20px;
     text-align: center;
-    margin-top: 40px !important;
     margin-left: 5px !important;
     background-color: white; /* Add white background here */
     border-radius: 16px; /* Match the base image border radius */
@@ -78,12 +78,12 @@ padding-right: 10px;
 .outfit-section {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start; /* Change to align items to the start */
 }
 
 .outfit-options {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* Change to justify items to the start */
     flex-wrap: wrap;
     margin-bottom: 7px;
 }
@@ -129,6 +129,7 @@ padding-right: 10px;
 h3 {
     margin-top: 0px;
     margin-bottom: 0px;
-    font-size: 40px;
+    font-size: 32px;
     color: #3a2104;
+    text-align: left; /* Change to left align the text */
 }
