@@ -255,6 +255,7 @@ h3 {
         }
         h3 {
             text-align: center; /* Center-align the h3 text */
+            width: 100%; /* Ensure it takes the full width */
         }
     }
 
