@@ -236,6 +236,8 @@ h3 {
             margin-top: 20px !important;
             height:  1000px !important;
         }
+
+
         .base-image {
             margin-right: 0;
             margin-bottom: 20px;
@@ -256,6 +258,9 @@ h3 {
         h3 {
             text-align: center; /* Center-align the h3 text */
             width: 100%; /* Ensure it takes the full width */
+        }
+        .outfit-options {
+            justify-content: center; /* Center-align the outfit options */
         }
     }
 
