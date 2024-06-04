@@ -240,9 +240,7 @@ h3 {
             margin-right: 0;
             margin-bottom: 20px;
         }
-        h3{
-            text-align: center !important;
-        }
+   
         .outfit {
             width: 55px;
             margin: 5px;
@@ -254,6 +252,9 @@ h3 {
         #reset-button, #download-button {
             width: 120px;
             font-size: 18px;
+        }
+        h3 {
+            text-align: center; /* Center-align the h3 text */
         }
     }
 
