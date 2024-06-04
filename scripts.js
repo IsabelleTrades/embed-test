@@ -144,9 +144,4 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     var iframe = document.querySelector('#block-yui_3_17_2_1_1619008534514_75765 iframe');
-iframe.onload = function() {
-  var iframeDocument = iframe.contentWindow.document.documentElement;
-  var newHeight = iframeDocument.scrollHeight;
-  iframe.style.height = newHeight + 'px';
-};
 });
