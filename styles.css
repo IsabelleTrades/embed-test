@@ -254,10 +254,6 @@ h3 {
     .outfit-options {
         justify-content: center; /* Center-align the outfit options */
     }
-    #background-overlay, #outfit-overlay, #hat-overlay, #face-overlay {
-        left: 50%; /* Center-align the overlays */
-        transform: translate(-50%, 0);
-    }
     .outfit-section {
         align-items: center; /* Center-align outfit sections */
     }
