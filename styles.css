@@ -188,7 +188,7 @@ h3 {
         justify-content: center; /* Center the buttons */
     }
     #reset-button, #download-button {
-        width: 100px;
+        width: 110px;
         font-size: 18px;
     }
 }
@@ -196,7 +196,7 @@ h3 {
 @media (max-width: 585px) {
     body {
         margin: 0;
-        margin-top: 1% !important;
+        margin-top: 10% !important;
     }
     h2 {
         font-size: 30px;
@@ -215,7 +215,6 @@ h3 {
         margin: 5px;
     }
     .game-container {
-        padding: 20px;
         box-shadow: none;
     }
     .button-container {
@@ -223,7 +222,7 @@ h3 {
         justify-content: center; /* Center the buttons */
     }
     #reset-button, #download-button {
-        width: 90px;
+        width: 100px;
         font-size: 14px;
     }
 }
