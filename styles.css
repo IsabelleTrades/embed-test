@@ -227,9 +227,9 @@ h3 {
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 515px) {
     body {
-        margin-top: 10% !important;
+        margin-top: 25% !important;
     }
     .base-image {
         margin-right: 0;
