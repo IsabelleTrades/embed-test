@@ -262,3 +262,14 @@ h3 {
         align-items: center; /* Center-align outfit sections */
     }
 }
+@media (max-width: 510px) {
+    body {
+        margin-top: 25% !important;
+    }
+}
+
+@media (max-width: 410px) {
+    body {
+        margin-top: 15% !important;
+    }
+}
