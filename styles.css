@@ -193,10 +193,10 @@ h3 {
     }
 }
 
-@media (max-width: 585px) {
+@media (max-width: 600px) {
     body {
         margin: 0;
-        margin-top: 10% !important;
+        margin-top: 12% !important;
     }
     h2 {
         font-size: 30px;
@@ -227,9 +227,9 @@ h3 {
     }
 }
 
-@media (max-width: 590px) {
+@media (max-width: 400px) {
     body {
-        margin-top: 20% !important;
+        margin-top: 10% !important;
     }
     .base-image {
         margin-right: 0;
