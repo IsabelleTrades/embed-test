@@ -151,7 +151,7 @@ h3 {
 @media (max-width: 1050px) {
     body {
         height: 80vh;
-        margin-top: 200px !important;
+        margin-top: 12% !important;
     }
     #base {
         width: 300px;
@@ -172,7 +172,7 @@ h3 {
 @media (max-width: 768px) {
 
     body {
-        margin-top: 220px !important;
+        margin-top: 12% !important;
     }
 
     .base-image {
