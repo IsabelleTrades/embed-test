@@ -1,4 +1,32 @@
 document.addEventListener('DOMContentLoaded', function () {
+    // Initialize Owl Carousel
+    $(document).ready(function ($) {
+        $('.owl-carousel').owlCarousel({
+            loop: false,
+            margin: 10,
+            items: 5,
+            autoWidth: true,
+            nav: true,
+            dots: false,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                750: {
+                    items: 5
+                },
+                600: {
+                    items: 3
+                }
+            }
+        });
+
+        // Initialize LazyLoad
+        var lazyLoadInstance = new LazyLoad({
+            elements_selector: ".outfit img"
+        });
+    });
+
     const backgrounds = document.querySelectorAll('.outfit.background');
     const outfits = document.querySelectorAll('.outfit.clothing');
     const hats = document.querySelectorAll('.outfit.hat');
@@ -49,69 +77,28 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    backgrounds.forEach(background => {
-        background.addEventListener('click', function () {
-            if (backgroundOverlay.src === background.src && !backgroundOverlay.classList.contains('hidden')) {
-                backgroundOverlay.classList.add('hidden');
-                backgroundOverlay.src = '';
-                drawImageOnCanvas(); // Ensure the canvas is updated
-            } else {
-                backgroundOverlay.src = background.src;
-                backgroundOverlay.onload = function () {
-                    backgroundOverlay.classList.remove('hidden');
-                    drawImageOnCanvas();
-                };
-            }
+    function addClickListener(elements, overlay) {
+        elements.forEach(element => {
+            element.addEventListener('click', function () {
+                if (overlay.src === element.src && !overlay.classList.contains('hidden')) {
+                    overlay.classList.add('hidden');
+                    overlay.src = '';
+                    drawImageOnCanvas(); // Ensure the canvas is updated
+                } else {
+                    overlay.src = element.src;
+                    overlay.onload = function () {
+                        overlay.classList.remove('hidden');
+                        drawImageOnCanvas();
+                    };
+                }
+            });
         });
-    });
+    }
 
-    outfits.forEach(outfit => {
-        outfit.addEventListener('click', function () {
-            if (outfitOverlay.src === outfit.src && !outfitOverlay.classList.contains('hidden')) {
-                outfitOverlay.classList.add('hidden');
-                outfitOverlay.src = '';
-                drawImageOnCanvas(); // Ensure the canvas is updated
-            } else {
-                outfitOverlay.src = outfit.src;
-                outfitOverlay.onload = function () {
-                    outfitOverlay.classList.remove('hidden');
-                    drawImageOnCanvas();
-                };
-            }
-        });
-    });
-
-    hats.forEach(hat => {
-        hat.addEventListener('click', function () {
-            if (hatOverlay.src === hat.src && !hatOverlay.classList.contains('hidden')) {
-                hatOverlay.classList.add('hidden');
-                hatOverlay.src = '';
-                drawImageOnCanvas(); // Ensure the canvas is updated
-            } else {
-                hatOverlay.src = hat.src;
-                hatOverlay.onload = function () {
-                    hatOverlay.classList.remove('hidden');
-                    drawImageOnCanvas();
-                };
-            }
-        });
-    });
-
-    faces.forEach(face => {
-        face.addEventListener('click', function () {
-            if (faceOverlay.src === face.src && !faceOverlay.classList.contains('hidden')) {
-                faceOverlay.classList.add('hidden');
-                faceOverlay.src = '';
-                drawImageOnCanvas(); // Ensure the canvas is updated
-            } else {
-                faceOverlay.src = face.src;
-                faceOverlay.onload = function () {
-                    faceOverlay.classList.remove('hidden');
-                    drawImageOnCanvas();
-                };
-            }
-        });
-    });
+    addClickListener(backgrounds, backgroundOverlay);
+    addClickListener(outfits, outfitOverlay);
+    addClickListener(hats, hatOverlay);
+    addClickListener(faces, faceOverlay);
 
     resetButton.addEventListener('click', function () {
         backgroundOverlay.src = '';
@@ -130,18 +117,18 @@ document.addEventListener('DOMContentLoaded', function () {
         canvas.toBlob(function (blob) {
             const link = document.createElement('a');
             link.href = URL.createObjectURL(blob);
-            link.download = 'hamchi.png';
+            link.download = 'trilly.png';
             link.click();
         });
     });
 
     baseImage.onload = function () {
+        console.log('Base image loaded');
         drawImageOnCanvas();
     };
 
     if (baseImage.complete) {
+        console.log('Base image already loaded');
         drawImageOnCanvas();
     }
-
-    var iframe = document.querySelector('#block-yui_3_17_2_1_1619008534514_75765 iframe');
 });

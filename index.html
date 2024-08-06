@@ -1,22 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta Data -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hamchi Game</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta property="og:title" content="Trilly - Create Your Own Memes" />
+    <meta property="og:description" content="Make your own Trilly!" />
+    <meta property="og:image" content="https://Trilly.fun/images/meta-img3.png" />
+    <meta property="og:url" content="https://TrillyMaker.lol/" />
+    <meta name="twitter:title" content="Trilly - Create Your Own Memes" />
+    <meta name="twitter:description" content="Make your own Trilly!" />
+    <meta name="twitter:image" content="https://Trilly.fun/images/meta-img3.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <title>$TRILLY Generator</title>
+    <link rel="icon" type="image/png" href="images/favicon.png"/>
+    <link rel="stylesheet" href="style3.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
-        </style>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 </head>
 <body>
-    <div class="game-container">
+
+    <div class="game-container" id="game-container">
         <div class="base-and-options">
             <div class="base-image">
                 <img id="background-overlay" src="" alt="Background Overlay" class="hidden">
-                <img id="base" src="images/base-image-hamchi-2.png" alt="Base Character">
+                <img id="base" src="images/trilly-base.png" alt="Base Character">
                 <img id="outfit-overlay" src="" alt="Outfit Overlay" class="hidden">
                 <img id="hat-overlay" src="" alt="Hat Overlay" class="hidden">
                 <img id="face-overlay" src="" alt="Face Overlay" class="hidden">
@@ -27,49 +41,60 @@
             </div>
             <div class="outfit-section">
                 <h3>Background</h3>
-                <div class="outfit-options backgrounds">
-                    <img class="outfit background" src="images/background1.png" alt="Background 1">
-                    <img class="outfit background" src="images/background2.png" alt="Background 2">
-                    <img class="outfit background" src="images/background3.png" alt="Background 3">
-                    <img class="outfit background" src="images/background4.png" alt="Background 4">
-                    <img class="outfit background" src="images/background5.png" alt="Background 5">
-                    <img class="outfit background" src="images/background6.png" alt="Background 6">
+                <div class="outfit-options backgrounds owl-carousel owl-theme">
+                    <div class="item"><img class="outfit background" src="images/background1.png" alt="Background 1"></div>
+                    <div class="item"><img class="outfit background" src="images/background2.png" alt="Background 2"></div>
+                    <div class="item"><img class="outfit background" src="images/background3.png" alt="Background 3"></div>
+                    <div class="item"><img class="outfit background" src="images/background4.png" alt="Background 4"></div>
+                    <div class="item"><img class="outfit background" src="images/background5.png" alt="Background 5"></div>
+                    <div class="item"><img class="outfit background" src="images/background6.png" alt="Background 5"></div>
+                    <div class="item"><img class="outfit background" src="images/background7.png" alt="Background 7"></div>
                 </div>
+                
 
                 <h3>Clothes and Accessories</h3>
-                <div class="outfit-options clothes">
-                    <img class="outfit clothing" src="images/outfit1.png" alt="Outfit 1">
-                    <img class="outfit clothing" src="images/outfit2.png" alt="Outfit 2">
-                    <img class="outfit clothing" src="images/outfit3.png" alt="Outfit 3">
-                    <img class="outfit clothing" src="images/outfit4.png" alt="Outfit 4">
-                    <img class="outfit clothing" src="images/accessory1.png" alt="Outfit 5">
-                    <img class="outfit clothing" src="images/accessory2.png" alt="Outfit 6">
-                    <img class="outfit clothing" src="images/Bikerjacket.png" alt="Outfit 7">
+                <div class="outfit-options clothes owl-carousel owl-theme">
+                    <div class="item"><img class="outfit clothing" src="images/batman.png" alt="Outfit 1"></div>
+                    <div class="item"><img class="outfit clothing" src="images/suit.png" alt="Outfit 2"></div>
+                    <div class="item"><img class="outfit clothing" src="images/outfit3.png" alt="Outfit 3"></div>
+                    <div class="item"><img class="outfit clothing" src="images/outfit4.png" alt="Outfit 4"></div>
+                    <div class="item"><img class="outfit clothing" src="images/outfit5.png" alt="Outfit 5"></div>
+                    <div class="item"><img class="outfit clothing" src="images/outfit6.png" alt="Outfit 5"></div>
+                    <div class="item"><img class="outfit clothing" src="images/outfit7.png" alt="Outfit 7"></div>
                 </div>
 
                 <h3>Hats</h3>
-                <div class="outfit-options hats">
-                    <img class="outfit hat" src="images/hat1.png" alt="Hat 1">
-                    <img class="outfit hat" src="images/hat2.png" alt="Hat 2">
-                    <img class="outfit hat" src="images/hat3-pirate.png" alt="Hat 3">
-                    <img class="outfit hat" src="images/hat4-cook.png" alt="Hat 4">
-                    <img class="outfit hat" src="images/hat5-bandana.png" alt="Hat 5">
-                    <img class="outfit hat" src="images/hat6-maga.png" alt="Hat 6">
-                    <img class="outfit hat" src="images/NurseHat.png" alt="Hat 7">
+                <div class="outfit-options hats owl-carousel owl-theme">
+                    <div class="item"><img class="outfit hat" src="images/wifhat.png" alt="Hat 1"></div>
+                    <div class="item"><img class="outfit hat" src="images/mcdonalds.png" alt="Hat 2"></div>
+                    <div class="item"><img class="outfit hat" src="images/hat-maga.png" alt="Hat 3"></div>
+                    <div class="item"><img class="outfit hat" src="images/hat4.png" alt="Hat 4"></div>
+                    <div class="item"><img class="outfit hat" src="images/hat5.png" alt="Hat 5"></div>
+                    <div class="item"><img class="outfit hat" src="images/hat6.png" alt="Hat 6"></div>
+                    <div class="item"><img class="outfit hat" src="images/hat7.png" alt="Hat 7"></div>
                 </div>
 
                 <h3>Faces</h3>
-                <div class="outfit-options faces">
-                    <img class="outfit face" src="images/Sunglasses.png" alt="Face 1">
-                    <img class="outfit face" src="images/Mask.png" alt="Face 2">
-                    <img class="outfit face" src="images/Glasses.png" alt="Face 3">
-                    <img class="outfit face" src="images/Mouth.png" alt="Face 4">
-                    <img class="outfit face" src="images/Eyepatch.png" alt="Face 5">
+                <div class="outfit-options faces owl-carousel owl-theme">
+                    <div class="item"><img class="outfit face" src="images/black-glasses.png" alt="Face 1"></div>
+                    <div class="item"><img class="outfit face" src="images/lasereyes.png" alt="Face 2"></div>
+                    <div class="item"><img class="outfit face" src="images/sunglasses.png" alt="Face 3"></div>
+                    <div class="item"><img class="outfit face" src="images/eyepatch.png" alt="Face 4"></div>
+                    <div class="item"><img class="outfit face" src="images/face5.png" alt="Face 5"></div>
+                    <div class="item"><img class="outfit face" src="images/face6.png" alt="Face 6"></div>
                 </div>
             </div>
         </div>
     </div>
-    <canvas id="canvas" style="display: none;"></canvas>
-    <script src="scripts.js"></script>
+
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    
+
+    <script src="script1.js"></script>
 </body>
 </html>
