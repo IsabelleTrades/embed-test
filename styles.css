@@ -6,7 +6,6 @@
 body {
     width: 100vw!important;
     font-family: "Oswald", sans-serif;
-    background-image: url("images/bg.jpg");
     color: #333333;
     display: flex;
     flex-direction: column;
@@ -57,25 +56,12 @@ h3 {
     text-align: center;
 }
 
-.intro-text {
-    text-align: center;
-    padding: 15px 30px 20px;
-color: white;
-text-transform: uppercase;
-margin-top: 0px;
-}
-
-.back-button {
-margin-top: 0px; 
-}
-
 .game-container {
     flex-direction: row;
     align-items: center;
     background-color: #A6B5FE;
     padding: 15px;
     border-radius: 45px;
-    margin-bottom: 40px;
     width: 1100px;
     max-width: 1200px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
@@ -255,38 +241,6 @@ h4 {
     height: auto;
 }
 
-.nav-links {
-    display: flex;
-    font-weight: 800;
-    align-items: center;
-    gap: 20px;
-}
-
-.social-links {
-    display: flex;
-    text-transform: capitalize;
-    font-weight: 800;
-    align-items: center;
-    gap: 15px;
-}
-
-.social-icon {
-    width: 20px;
-    height: auto;
-}
-
-.telegram-button {
-    background-color: #0088cc;
-}
-
-.twitter-button {
-    background-color: #1DA1F2;
-}
-
-.buy-button {
-    background-color: #FFA500;
-}
-
 .footer-container {
     text-align: center;
     justify-items: center;
@@ -300,24 +254,6 @@ h4 {
     border-radius: 10px;
 }
 
-#footertext {
-    text-align: center;
-    font-size: 0.95em;
-    line-height: 1.25;
-    font-weight: 600;
-}
-
-#credits {
-    text-align: center;
-    color: white;
-    font-size: 0.95em;
-    line-height: 1.25;
-    font-weight: 800;
-}
-
-#credits a {
-    color: white;
-}
 
 @media (max-width: 1050px) {
     body {
@@ -500,8 +436,6 @@ h4 {
         margin-bottom: 20px;
     }
     .outfit {
-        width: 55px;
-        height: 55px;
         margin: 5px;
     }
     .button-container {
@@ -558,4 +492,3 @@ h4 {
         border-radius: 0px;
     }
 }
-
